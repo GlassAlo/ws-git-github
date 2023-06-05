@@ -20,7 +20,6 @@ int main(void)
     for (int i = 0; i < 10; i++) {
         a += i;
         print_something(a);
-        flush_stdout();
     }
     tmp = *a;
     free(a);
