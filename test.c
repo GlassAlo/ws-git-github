@@ -7,6 +7,11 @@ int print_something(int *a)
     return 0;
 }
 
+void flush_stdout(void)
+{
+    fflush(stdout);
+}
+
 int main(void)
 {
     int *a = malloc(sizeof(int));
@@ -15,6 +20,7 @@ int main(void)
     for (int i = 0; i < 10; i++) {
         a += i;
         print_something(a);
+        flush_stdout();
     }
     tmp = *a;
     free(a);
